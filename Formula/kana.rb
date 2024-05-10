@@ -5,20 +5,20 @@
 class Kana < Formula
   desc "Terminal app to practice Kana"
   homepage "https://github.com/dunkbing/kana"
-  version "0.1.0"
+  version "0.2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/dunkbing/kana/releases/download/v0.1.0/kana_Darwin_x86_64.tar.gz"
-      sha256 "1340626ef2976f00fe2f73c4da187e587760c20c55cfedf0f0d1d9551cc9fb33"
+      url "https://github.com/dunkbing/kana/releases/download/v0.2.0/kana_Darwin_x86_64.tar.gz"
+      sha256 "9b849708dbc5a694e366fcd78ec4533db7593689bd9788ef1732e0618ab2c1b4"
 
       def install
         bin.install "kana"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/dunkbing/kana/releases/download/v0.1.0/kana_Darwin_arm64.tar.gz"
-      sha256 "a7853d328decc4d758836d6488f1f3776042e6734d6e38109b7bfe6d2c63b538"
+      url "https://github.com/dunkbing/kana/releases/download/v0.2.0/kana_Darwin_arm64.tar.gz"
+      sha256 "87e9c85128614fc33900bc2c9c05573125dfe8c757ed2142c67d981161c629ab"
 
       def install
         bin.install "kana"
@@ -28,16 +28,16 @@ class Kana < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/dunkbing/kana/releases/download/v0.1.0/kana_Linux_x86_64.tar.gz"
-      sha256 "1c1bffb3f9b3deb8f44fef541330acd91bb4ef76b27c1acf09f883d9901efd0f"
+      url "https://github.com/dunkbing/kana/releases/download/v0.2.0/kana_Linux_x86_64.tar.gz"
+      sha256 "9c7131d0af415dd015d12a229a63baac8fc589847f8cd655f6e3e8f9b963b716"
 
       def install
         bin.install "kana"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dunkbing/kana/releases/download/v0.1.0/kana_Linux_arm64.tar.gz"
-      sha256 "28bbc4a45c724d0b9899716991258bdec71f89ddd64963890c09f553be6bd838"
+      url "https://github.com/dunkbing/kana/releases/download/v0.2.0/kana_Linux_arm64.tar.gz"
+      sha256 "600194643292da6dd44640b5fd6894cbff7f00be311d381eb077350226baa18c"
 
       def install
         bin.install "kana"
