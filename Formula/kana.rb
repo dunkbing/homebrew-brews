@@ -5,20 +5,20 @@
 class Kana < Formula
   desc "Terminal app to practice Kana"
   homepage "https://github.com/dunkbing/kana"
-  version "0.2.0"
+  version "0.3.0"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/dunkbing/kana/releases/download/v0.2.0/kana_Darwin_x86_64.tar.gz"
-      sha256 "9b849708dbc5a694e366fcd78ec4533db7593689bd9788ef1732e0618ab2c1b4"
+    on_intel do
+      url "https://github.com/dunkbing/kana/releases/download/v0.3.0/kana_Darwin_x86_64.tar.gz"
+      sha256 "6ba1314efdc1a441a1684a1bc4504c56256ec120eeedf79abd92c263b531f6be"
 
       def install
         bin.install "kana"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/dunkbing/kana/releases/download/v0.2.0/kana_Darwin_arm64.tar.gz"
-      sha256 "87e9c85128614fc33900bc2c9c05573125dfe8c757ed2142c67d981161c629ab"
+    on_arm do
+      url "https://github.com/dunkbing/kana/releases/download/v0.3.0/kana_Darwin_arm64.tar.gz"
+      sha256 "3ee94bf6dae440f87c7c0ddfdac3913fb12d63cd07afef5e664330ec60c43424"
 
       def install
         bin.install "kana"
@@ -27,20 +27,24 @@ class Kana < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/dunkbing/kana/releases/download/v0.2.0/kana_Linux_x86_64.tar.gz"
-      sha256 "9c7131d0af415dd015d12a229a63baac8fc589847f8cd655f6e3e8f9b963b716"
+    on_intel do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/dunkbing/kana/releases/download/v0.3.0/kana_Linux_x86_64.tar.gz"
+        sha256 "8a003fabf3bd29f5bda4805b32dd6d4e9d3ef08d11e24ae944a06c94de310d4d"
 
-      def install
-        bin.install "kana"
+        def install
+          bin.install "kana"
+        end
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dunkbing/kana/releases/download/v0.2.0/kana_Linux_arm64.tar.gz"
-      sha256 "600194643292da6dd44640b5fd6894cbff7f00be311d381eb077350226baa18c"
+    on_arm do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/dunkbing/kana/releases/download/v0.3.0/kana_Linux_arm64.tar.gz"
+        sha256 "25f34dff389eb026882e922726ef1544a00f3c56d31d42f51877696856253c1f"
 
-      def install
-        bin.install "kana"
+        def install
+          bin.install "kana"
+        end
       end
     end
   end
