@@ -5,20 +5,20 @@
 class Kana < Formula
   desc "Terminal app to practice Kana"
   homepage "https://github.com/dunkbing/kana"
-  version "0.3.0"
+  version "0.3.1"
 
   on_macos do
     on_intel do
-      url "https://github.com/dunkbing/kana/releases/download/v0.3.0/kana_Darwin_x86_64.tar.gz"
-      sha256 "6ba1314efdc1a441a1684a1bc4504c56256ec120eeedf79abd92c263b531f6be"
+      url "https://github.com/dunkbing/kana/releases/download/v0.3.1/kana_Darwin_x86_64.tar.gz"
+      sha256 "76a909382bafdd7eeae5ae36b0a37c747399158c2a222ca7b17cbfd0e2421cd9"
 
       def install
         bin.install "kana"
       end
     end
     on_arm do
-      url "https://github.com/dunkbing/kana/releases/download/v0.3.0/kana_Darwin_arm64.tar.gz"
-      sha256 "3ee94bf6dae440f87c7c0ddfdac3913fb12d63cd07afef5e664330ec60c43424"
+      url "https://github.com/dunkbing/kana/releases/download/v0.3.1/kana_Darwin_arm64.tar.gz"
+      sha256 "c5d10f67f6592962e0b3c45efe2238783762ba8ee87d7858674ac69d88b48ae7"
 
       def install
         bin.install "kana"
@@ -29,8 +29,8 @@ class Kana < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/dunkbing/kana/releases/download/v0.3.0/kana_Linux_x86_64.tar.gz"
-        sha256 "8a003fabf3bd29f5bda4805b32dd6d4e9d3ef08d11e24ae944a06c94de310d4d"
+        url "https://github.com/dunkbing/kana/releases/download/v0.3.1/kana_Linux_x86_64.tar.gz"
+        sha256 "a665fd17983aee15122f79cde3c8eb8af2fc517ce66a14419fbcf6b2fe4301d4"
 
         def install
           bin.install "kana"
@@ -39,8 +39,8 @@ class Kana < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/dunkbing/kana/releases/download/v0.3.0/kana_Linux_arm64.tar.gz"
-        sha256 "25f34dff389eb026882e922726ef1544a00f3c56d31d42f51877696856253c1f"
+        url "https://github.com/dunkbing/kana/releases/download/v0.3.1/kana_Linux_arm64.tar.gz"
+        sha256 "8c4af283c7f690ccf22841925369f8e5d53551a4bfaaa3a1a442f7ccb9c4595c"
 
         def install
           bin.install "kana"
