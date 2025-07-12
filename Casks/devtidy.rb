@@ -2,7 +2,7 @@
 cask "devtidy" do
   desc "A terminal UI app to clean up development dependencies and build artifacts."
   homepage "https://github.com/dunkbing/devtidy"
-  version "1.0.3"
+  version "1.0.4"
 
   livecheck do
     skip "Auto-generated on release."
@@ -12,23 +12,29 @@ cask "devtidy" do
 
   on_macos do
     on_intel do
-      url "https://github.com/dunkbing/devtidy/releases/download/v1.0.3/devtidy_Darwin_x86_64.tar.gz"
-      sha256 "87f074cc192a9552d777373d31eaa2f3de68fad4ba28cce6e5f35c15840d783e"
+      url "https://github.com/dunkbing/devtidy/releases/download/v1.0.4/devtidy_Darwin_x86_64.tar.gz"
+      sha256 "f8603cf95bf5892ff9abb14eeb1f6d6467eedc3b1e01368dee8418923b6294d9"
     end
     on_arm do
-      url "https://github.com/dunkbing/devtidy/releases/download/v1.0.3/devtidy_Darwin_arm64.tar.gz"
-      sha256 "6dcfdd4b0d2c6e3045adfe5c31649ea3d02e23d277a5b3e3d0e94bb094dc68dd"
+      url "https://github.com/dunkbing/devtidy/releases/download/v1.0.4/devtidy_Darwin_arm64.tar.gz"
+      sha256 "1be370a2a6dc2b646103589bd3fb020fa4bf1021f405da835d5b064d0dc48b47"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/dunkbing/devtidy/releases/download/v1.0.3/devtidy_Linux_x86_64.tar.gz"
-      sha256 "6f01d08c2d7dbaa846c23c7da75a0ef3e3ad5105ca84a5e44bf7b5c16ac068b5"
+      url "https://github.com/dunkbing/devtidy/releases/download/v1.0.4/devtidy_Linux_x86_64.tar.gz"
+      sha256 "9614d10b89d0debf1f59bf7ad53e1f08fcd68001ba1e47f4fc1d1a83c4437066"
     end
     on_arm do
-      url "https://github.com/dunkbing/devtidy/releases/download/v1.0.3/devtidy_Linux_arm64.tar.gz"
-      sha256 "96c84b5d2a14855b729e00831c76d34ce5aacebf1a8737579e02239caed7f5a4"
+      url "https://github.com/dunkbing/devtidy/releases/download/v1.0.4/devtidy_Linux_arm64.tar.gz"
+      sha256 "2f56b965dca42763bb229c4c532643efcd644e73df455bd59288d6c19e0c0874"
+    end
+  end
+
+  postflight do
+    if system_command("/usr/bin/xattr", args: ["-h"]).exit_status == 0
+      system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/devtidy"]
     end
   end
 
