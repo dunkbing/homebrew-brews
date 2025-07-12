@@ -2,7 +2,7 @@
 cask "devtidy" do
   desc "A terminal UI app to clean up development dependencies and build artifacts."
   homepage "https://github.com/dunkbing/devtidy"
-  version "1.0.2"
+  version "1.0.3"
 
   livecheck do
     skip "Auto-generated on release."
@@ -12,23 +12,23 @@ cask "devtidy" do
 
   on_macos do
     on_intel do
-      url "https://github.com/dunkbing/devtidy/releases/download/v1.0.2/devtidy_Darwin_x86_64.tar.gz"
-      sha256 "b8ac1d85fec5aae4f5b50cf6fb47e4d5c64334a32c17b078fc1bc560e77a87e4"
+      url "https://github.com/dunkbing/devtidy/releases/download/v1.0.3/devtidy_Darwin_x86_64.tar.gz"
+      sha256 "87f074cc192a9552d777373d31eaa2f3de68fad4ba28cce6e5f35c15840d783e"
     end
     on_arm do
-      url "https://github.com/dunkbing/devtidy/releases/download/v1.0.2/devtidy_Darwin_arm64.tar.gz"
-      sha256 "b4c7d18d158a0b7c2f881fb0cbab7896590e61ebd0f67f439769caff259d5ff0"
+      url "https://github.com/dunkbing/devtidy/releases/download/v1.0.3/devtidy_Darwin_arm64.tar.gz"
+      sha256 "6dcfdd4b0d2c6e3045adfe5c31649ea3d02e23d277a5b3e3d0e94bb094dc68dd"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/dunkbing/devtidy/releases/download/v1.0.2/devtidy_Linux_x86_64.tar.gz"
-      sha256 "8f34308d2d61f73c7364867f3efdc792f9d7ec2bbb9aea3f46290b9ad4fc7429"
+      url "https://github.com/dunkbing/devtidy/releases/download/v1.0.3/devtidy_Linux_x86_64.tar.gz"
+      sha256 "6f01d08c2d7dbaa846c23c7da75a0ef3e3ad5105ca84a5e44bf7b5c16ac068b5"
     end
     on_arm do
-      url "https://github.com/dunkbing/devtidy/releases/download/v1.0.2/devtidy_Linux_arm64.tar.gz"
-      sha256 "0681d9a193ce98e81851903c33cfdecbd485b0c71c8cc4c32d56cb221d16965a"
+      url "https://github.com/dunkbing/devtidy/releases/download/v1.0.3/devtidy_Linux_arm64.tar.gz"
+      sha256 "96c84b5d2a14855b729e00831c76d34ce5aacebf1a8737579e02239caed7f5a4"
     end
   end
 
